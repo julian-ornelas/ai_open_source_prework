@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMORPG Game Client</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    
+    <!-- Login Screen -->
+    <div id="loginScreen">
+        <div id="loginForm">
+            <h1>MMORPG Game Client</h1>
+            <p>Enter your username to join the game:</p>
+            <input type="text" id="usernameInput" placeholder="Enter your username" maxlength="20">
+            <button id="joinButton">Join Game</button>
+            <div id="loginError" class="error-message"></div>
+        </div>
+    </div>
+    
+    <!-- UI Elements -->
+    <div id="ui" style="display: none;">
+        <!-- Player List -->
+        <div id="playerList">
+            <h3>Players Online</h3>
+            <div id="playerListContent"></div>
+        </div>
+        
+        <!-- Latency Display -->
+        <div id="latencyDisplay">
+            <span id="pingValue">--</span>ms
+        </div>
+        
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>

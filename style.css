@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background-color: #000;
+}
+
+#gameCanvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    cursor: crosshair;
+}
+
+/* UI Elements */
+#ui {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* Player List */
+#playerList {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    min-width: 200px;
+    pointer-events: auto;
+    font-family: Arial, sans-serif;
+}
+
+#playerList h3 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #4CAF50;
+}
+
+#playerListContent {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.player-item {
+    padding: 5px 0;
+    border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.player-item:last-child {
+    border-bottom: none;
+}
+
+.player-avatar {
+    width: 20px;
+    height: 20px;
+    background: #666;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.player-name {
+    font-size: 12px;
+    flex: 1;
+}
+
+.player-status {
+    font-size: 10px;
+    color: #888;
+}
+
+/* Latency Display */
+#latencyDisplay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    pointer-events: auto;
+}
+
+#pingValue {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Login Screen */
+#loginScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    font-family: Arial, sans-serif;
+}
+
+#loginForm {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+#loginForm h1 {
+    color: #2a5298;
+    margin: 0 0 20px 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#loginForm p {
+    color: #666;
+    margin: 0 0 25px 0;
+    font-size: 16px;
+}
+
+#usernameInput {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+#usernameInput:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+#joinButton {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+#joinButton:hover {
+    background: #45a049;
+}
+
+#joinButton:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.error-message {
+    color: #f44336;
+    font-size: 14px;
+    margin-top: 15px;
+    min-height: 20px;
+}
+
